@@ -6,7 +6,7 @@
 # Newman
 # QA
 
-📌 Présentation du projet
+## 📌 Présentation du projet
 
 Ce projet est un projet de test d'API REST réalisé dans le cadre d'un portfolio QA afin de démontrer des compétences pratiques en matière de tests d'API avec Postman.
 
@@ -16,7 +16,7 @@ L'objectif est de simuler un workflow QA réaliste pour une application basée s
 
 ---
 
-🎯 Objectifs du projet
+## 🎯 Objectifs du projet
 
 Les principaux objectifs de ce projet sont les suivants :
 
@@ -38,7 +38,7 @@ Les principaux objectifs de ce projet sont les suivants :
 
 ---
 
-🧩 Application sous test
+## 🧩 Application sous test
 
 Ce projet utilise ReqRes, une API REST publique conçue à des fins de test et de démonstration.
 
@@ -51,17 +51,18 @@ L'API permet notamment de pratiquer :
 - La suppression des utilisateurs
 - La gestion des erreurs
 
-API
+### API
 
+```text 
 ReqRes
-
 https://reqres.in
+```
 
 «Remarque : ReqRes est une API publique de démonstration. Son comportement et ses exigences d'authentification peuvent évoluer au fil du temps. Les résultats présentés dans ce repository seront basés sur le comportement réellement observé lors de l'exécution des tests.»
 
 ---
 
-🛠️ Outils et technologies
+## 🛠️ Outils et technologies
 
 Outil / Technologie| Utilisation
 Postman| Envoi des requêtes API et automatisation des tests
@@ -74,7 +75,7 @@ JSON| Données des requêtes et réponses
 
 ---
 
-🔐 Tests d'authentification
+## 🔐 Tests d'authentification
 
 Les tests d'authentification couvrent notamment les scénarios suivants :
 
@@ -87,6 +88,7 @@ Les tests d'authentification couvrent notamment les scénarios suivants :
 
 Exemple de workflow :
 
+```text 
 Identifiants valides
        ↓
 POST /api/login
@@ -94,10 +96,10 @@ POST /api/login
 Authentification
        ↓
 Token
-
+```
 ---
 
-👤 Tests de gestion des utilisateurs – CRUD
+## 👤 Tests de gestion des utilisateurs – CRUD
 
 Le projet couvre les principales opérations CRUD :
 
@@ -110,45 +112,45 @@ Delete| DELETE| Supprimer un utilisateur
 
 ---
 
-🧪 Approche de test
+## 🧪 Approche de test
 
 Les approches et techniques de test suivantes sont appliquées lorsque cela est pertinent :
 
-Tests positifs
+### Tests positifs
 
 Des données valides et des actions attendues sont utilisées afin de vérifier le comportement normal de l'API.
 
-Tests négatifs
+### Tests négatifs
 
 Des données invalides, des champs manquants et des requêtes incorrectes sont utilisés afin de vérifier la gestion des erreurs.
 
-Analyse des valeurs limites
+### Analyse des valeurs limites
 
 Les valeurs situées autour des limites pertinentes sont testées lorsque cela est applicable.
 
-Partitionnement en classes d'équivalence
+### Partitionnement en classes d'équivalence
 
 Les données d'entrée sont divisées en classes représentatives valides et invalides.
 
-Tests fonctionnels
+### Tests fonctionnels
 
 Les fonctionnalités de l'API sont validées par rapport au comportement attendu.
 
-Tests exploratoires
+### Tests exploratoires
 
 Des comportements supplémentaires de l'API et des risques potentiels sont explorés au-delà des cas de test prédéfinis.
 
-Tests de régression
+### Tests de régression
 
 Les fonctionnalités API précédemment testées peuvent être réexécutées après des modifications.
 
-Retest
+### Retest
 
 Les anomalies précédemment signalées peuvent être testées à nouveau après la correction fournie par l'équipe de développement.
 
 ---
 
-📋 Couverture des tests
+## 📋 Couverture des tests
 
 Le projet est prévu pour couvrir :
 
@@ -170,33 +172,39 @@ Le projet est prévu pour couvrir :
 
 ---
 
-🤖 Automatisation des tests avec Postman
+## 🤖 Automatisation des tests avec Postman
 
 Les tests Postman sont implémentés à l'aide d'assertions JavaScript.
 
 Exemple :
 
+```text 
 pm.test("Le code de statut est 200", function () {
     pm.response.to.have.status(200);
 });
+```
 
 Validation de la réponse :
 
+```text 
 pm.test("La réponse contient la propriété data", function () {
     const response = pm.response.json();
 
     pm.expect(response).to.have.property("data");
 });
+```
 
 Validation du temps de réponse :
 
+```text 
 pm.test("Le temps de réponse est inférieur à 1000 ms", function () {
     pm.expect(pm.response.responseTime).to.be.below(1000);
 });
+```
 
 ---
 
-🌍 Variables d'environnement
+## 🌍 Variables d'environnement
 
 L'environnement Postman utilise notamment les variables suivantes :
 
@@ -209,16 +217,18 @@ environment
 
 Exemple :
 
+``` text 
 {{base_url}}/api/users/{{user_id}}
+```
 
 Les valeurs sensibles telles que les clés API ne sont pas enregistrées dans le repository public.
 
 ---
 
-🔄 Workflow API de bout en bout
+## 🔄 Workflow API de bout en bout
 
 Le projet comprend un workflow de gestion des utilisateurs de bout en bout :
-
+```text 
 Connexion
   ↓
 Récupération des utilisateurs
@@ -234,10 +244,11 @@ Modification partielle
 Suppression d'un utilisateur
 
 Ce workflow permet de démontrer comment plusieurs requêtes API peuvent être combinées afin de vérifier un parcours fonctionnel complet.
+```
 
 ---
 
-📊 Exécution des tests
+## 📊 Exécution des tests
 
 L'exécution des tests est réalisée avec :
 
