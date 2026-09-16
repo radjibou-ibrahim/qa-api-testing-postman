@@ -268,15 +268,15 @@ Chaque exécution peut enregistrer les informations suivantes :
 - ID de l'anomalie associée
 
 Les statuts d'exécution possibles sont :
-
+```text 
 PASS
 FAIL
 BLOCKED
 NOT RUN
-
+```
 ---
 
-🐞 Gestion des anomalies
+## 🐞 Gestion des anomalies
 
 Les anomalies identifiées pendant les tests sont documentées à l'aide d'un format structuré de rapport de bug.
 
@@ -297,19 +297,20 @@ Chaque anomalie peut contenir :
 
 ---
 
-📈 Reporting des tests
+## 📈 Reporting des tests
 
 Newman est utilisé pour exécuter la collection Postman depuis la ligne de commande et générer les rapports d'exécution.
 
 Exemple :
-
+```text 
 newman run User-Management-API.postman_collection.json
+```
 
 Génération d'un rapport HTML :
-
+```text 
 newman run User-Management-API.postman_collection.json \
 -r cli,html
-
+```
 Les résultats finaux de l'exécution seront documentés dans le répertoire :
 
 09-Reports/
@@ -317,7 +318,7 @@ Les résultats finaux de l'exécution seront documentés dans le répertoire :
 ---
 
 📁 Structure du projet
-
+```text 
 qa-api-testing-postman/
 │
 ├── README.md
@@ -361,13 +362,13 @@ qa-api-testing-postman/
 │
 └── 11-Test-Summary/
     └── Test-Summary.md
-
+```
 ---
 
-🔗 Traçabilité
+## 🔗 Traçabilité
 
 La traçabilité est maintenue tout au long du processus de test :
-
+```text 
 Exigence
      ↓
 Scénario de test
@@ -379,12 +380,12 @@ Requête Postman
 Exécution du test
      ↓
 Anomalie
-
+```
 Cette approche permet d'avoir une visibilité sur la couverture des tests et sur l'impact des anomalies identifiées.
 
 ---
 
-📌 État du projet
+## 📌 État du projet
 
 Statut : 🚧 En cours
 
@@ -410,7 +411,7 @@ En cours
 
 ---
 
-🎓 Compétences démontrées
+## 🎓 Compétences démontrées
 
 Ce projet permet de démontrer des compétences pratiques en :
 
@@ -440,8 +441,8 @@ Ce projet permet de démontrer des compétences pratiques en :
 
 ---
 
-👨‍💻 Auteur
-
+## 👨‍💻 Auteur
+### Radjibou IBRAHIM 
 QA Junior / Manual QA Tester
 
 Ce projet fait partie de mon portfolio QA et démontre mes compétences pratiques en tests d'API avec Postman et Newman.
