@@ -5,7 +5,7 @@
 ## Newman
 ## QA
 
-📌 Project Overview
+### Project Overview
 
 This project is a portfolio-based REST API testing project designed to demonstrate practical QA skills using Postman.
 
@@ -15,7 +15,7 @@ The objective is to simulate a realistic QA workflow for an API-based applicatio
 
 ---
 
-🎯 Project Objectives
+## Project Objectives
 
 The main objectives of this project are to:
 
@@ -37,7 +37,7 @@ The main objectives of this project are to:
 
 ---
 
-## 🧩 Application Under Test
+## Application Under Test
 
 The project uses ReqRes, a public REST API designed for testing and demonstration purposes.
 
@@ -60,20 +60,21 @@ https://reqres.in
 
 ---
 
-🛠️ Tools & Technologies
+## Tools & Technologies
 
-Tool / Technology| Purpose
-Postman| API requests and test automation
-JavaScript| Postman test scripts and assertions
-Newman| Command-line collection execution
-GitHub| Version control and project documentation
-Markdown| QA documentation
-REST API| Application interface under test
-JSON| Request and response data
+| Tool / Technology | Purpose |
+|---|---|
+| Postman | API requests and test automation |
+| JavaScript | Postman test scripts and assertions |
+| Newman | Command-line collection execution |
+| GitHub | Version control and project documentation |
+| Markdown | QA documentation |
+| REST API | Application interface under test |
+| JSON | Request and response data |
 
 ---
 
-🔐 Authentication Testing
+## Authentication Testing
 
 Authentication testing covers scenarios such as:
 
@@ -85,7 +86,7 @@ Authentication testing covers scenarios such as:
 - Authentication-related error responses
 
 Example workflow:
-
+```text 
 Valid Credentials
        ↓
 POST /api/login
@@ -93,10 +94,10 @@ POST /api/login
 Authentication
        ↓
 Token
-
+```
 ---
 
-👤 User Management – CRUD Testing
+## User Management – CRUD Testing
 
 The project covers the main CRUD operations:
 
@@ -109,45 +110,45 @@ Delete| DELETE| Delete a user
 
 ---
 
-🧪 Testing Approach
+## Testing Approach
 
 The following testing approaches and techniques are applied where appropriate:
 
-Positive Testing
+### Positive Testing
 
 Valid inputs and expected user actions are used to verify normal API behavior.
 
-Negative Testing
+### Negative Testing
 
 Invalid inputs, missing data and invalid requests are used to verify error handling.
 
-Boundary Value Analysis
+### Boundary Value Analysis
 
 Values around relevant boundaries are tested when applicable.
 
-Equivalence Partitioning
+### Equivalence Partitioning
 
 Input data is divided into representative valid and invalid classes.
 
-Functional Testing
+### Functional Testing
 
 API functionality is validated against the expected behavior.
 
-Exploratory Testing
+### Exploratory Testing
 
 Additional API behavior and potential risks are explored beyond predefined test cases.
 
-Regression Testing
+### Regression Testing
 
 Previously tested API functionality can be re-executed after changes.
 
-Retesting
+### Retesting
 
 Previously reported defects can be tested again after a fix is provided.
 
 ---
 
-📋 Test Coverage
+## Test Coverage
 
 The project is planned to cover:
 
@@ -169,12 +170,12 @@ The project is planned to cover:
 
 ---
 
-🤖 Postman Test Automation
+## Postman Test Automation
 
 Postman tests are implemented using JavaScript assertions.
 
 Examples include:
-
+```text 
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
@@ -186,38 +187,39 @@ pm.test("Response contains data", function () {
 
     pm.expect(response).to.have.property("data");
 });
-
+```
 Response time validation:
 
+```text 
 pm.test("Response time is less than 1000ms", function () {
     pm.expect(pm.response.responseTime).to.be.below(1000);
 });
-
+```
 ---
 
-🌍 Environment Variables
+## Environment Variables
 
 The Postman environment uses variables such as:
 
-base_url
-api_key
-user_id
-created_user_id
-token
-environment
+- base_url
+- api_key
+- user_id
+- created_user_id
+- token
+- environment
 
 Example:
-
+```text 
 {{base_url}}/api/users/{{user_id}}
-
+```
 Sensitive values such as API keys are not committed to the public repository.
 
 ---
 
-🔄 End-to-End API Workflow
+## End-to-End API Workflow
 
 The project includes an end-to-end user management workflow:
-
+```text 
 Login
   ↓
 Get Users
@@ -231,12 +233,13 @@ Update User
 Partial Update
   ↓
 Delete User
+```
 
 This workflow demonstrates how individual API requests can be combined into a complete functional flow.
 
 ---
 
-📊 Test Execution
+## Test Execution
 
 Test execution is performed using:
 
@@ -257,14 +260,14 @@ Each test execution records relevant information such as:
 
 Possible execution statuses:
 
-PASS
-FAIL
-BLOCKED
-NOT RUN
+- PASS
+- FAIL
+- BLOCKED
+- NOT RUN
 
 ---
 
-🐞 Defect Reporting
+## Defect Reporting
 
 Defects identified during testing are documented using a structured bug report format.
 
@@ -285,7 +288,7 @@ Each defect may include:
 
 ---
 
-📈 Test Reporting
+## Test Reporting
 
 Newman is used to execute the Postman collection from the command line and generate test execution reports.
 
@@ -294,16 +297,16 @@ Example:
 newman run User-Management-API.postman_collection.json
 
 HTML reporting:
-
+```text 
 newman run User-Management-API.postman_collection.json \
 -r cli,html
-
+```
 The final execution results will be documented in the "09-Reports/" directory.
 
 ---
 
-📁 Project Structure
-
+## Project Structure
+```text 
 qa-api-testing-postman/
 │
 ├── README.md
@@ -347,10 +350,10 @@ qa-api-testing-postman/
 │
 └── 11-Test-Summary/
     └── Test-Summary.md
-
+```
 ---
 
-🔗 Traceability
+## Traceability
 
 Traceability is maintained throughout the testing process:
 
@@ -370,33 +373,7 @@ This provides visibility into test coverage and the impact of identified defects
 
 ---
 
-📌 Project Status
-
-Status: 🚧 In Progress
-
-Completed
-
-- [x] Project definition
-- [x] Repository structure
-- [x] Initial README
-
-In Progress
-
-- [ ] API analysis
-- [ ] Test Plan
-- [ ] Test Scenarios
-- [ ] Test Cases
-- [ ] Test Data
-- [ ] Postman Collection
-- [ ] Automated assertions
-- [ ] Test execution
-- [ ] Bug reporting
-- [ ] Newman reporting
-- [ ] Test summary
-
----
-
-🎓 Skills Demonstrated
+## Skills Demonstrated
 
 This project demonstrates practical skills in:
 
@@ -420,12 +397,15 @@ This project demonstrates practical skills in:
 - Newman
 - Defect Reporting
 - Test Reporting
+- Jira
 - GitHub
 - QA Documentation
 
 ---
 
-👨‍💻 Author
+## Author
+
+### Radjibou IBRAHIM
 
 QA Junior / Manual QA Tester
 
