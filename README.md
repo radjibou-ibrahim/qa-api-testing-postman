@@ -37,7 +37,7 @@ The main objectives of this project are to:
 
 ---
 
-🧩 Application Under Test
+## 🧩 Application Under Test
 
 The project uses ReqRes, a public REST API designed for testing and demonstration purposes.
 
@@ -50,9 +50,9 @@ The API provides endpoints that allow QA engineers to practice:
 - User deletion
 - Error handling
 
-API
+### API
 
-ReqRes
+### ReqRes
 
 https://reqres.in
 
