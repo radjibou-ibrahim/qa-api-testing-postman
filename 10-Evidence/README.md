@@ -106,7 +106,6 @@ The exact evidence files may vary depending on the final execution and available
 
 Evidence should be directly associated with the relevant Test Case whenever possible.
 
-```text 
 | Test Case | Testing Area | Evidence |
 |---|---|---|
 | TC-AUTH-001 | Valid login | Postman request/response |
@@ -126,7 +125,7 @@ Evidence should be directly associated with the relevant Test Case whenever poss
 | TC-VAL-002 | Content-Type validation | Assertion result |
 | TC-VAL-004 | JSON data types | Assertion result |
 | TC-VAL-005 | Required fields | Assertion result |
-```
+
 ---
 
 ## 5. Defect → Evidence Traceability
