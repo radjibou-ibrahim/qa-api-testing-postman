@@ -154,18 +154,19 @@ The main limitations were:
 The project demonstrated an end-to-end API testing workflow using Postman and Newman.
 The testing covered functional scenarios, negative testing, authentication, CRUD operations, response validation, automated assertions, defect reporting, evidence collection, and automated execution.
 The main findings were:
-Two authentication-related defects were identified and reported.
-Newman execution exposed additional collection configuration issues.
-A response-time observation was identified.
-The test suite can be further improved through collection correction and repeated Newman execution.
+
+- Two authentication-related defects were identified and reported.
+- Newman execution exposed additional collection configuration issues.
+- A response-time observation was identified.
+- The test suite can be further improved through collection correction and repeated Newman execution.
 
 ---
 
 12. Next Steps
 Correct the malformed {{user_id}} references.
-Re-run the Newman collection.
-Revalidate the affected test cases.
-Update the execution results.
-Update the final evidence where necessary.
-Review the final defect status.
-Maintain the project as a reusable API testing portfolio example. 
+- Re-run the Newman collection.
+- Revalidate the affected test cases.
+- Update the execution results.
+- Update the final evidence where necessary.
+- Review the final defect status.
+- Maintain the project as a reusable API testing portfolio example. 
