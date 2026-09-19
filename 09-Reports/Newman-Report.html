@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newman Execution Report — User Management API</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--text:#17202a;--muted:#667085;--line:#e4e7ec;--ok:#067647;--okbg:#ecfdf3;--bad:#b42318;--badbg:#fef3f2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,Arial,sans-serif;line-height:1.5}
+.container{max-width:1200px;margin:auto;padding:32px 22px 60px}
+header{background:#182230;color:#fff;border-radius:16px;padding:32px;margin-bottom:22px}
+h1{margin:0 0 8px;font-size:30px}h2{margin:0 0 16px;font-size:20px}.sub{color:#d0d5dd}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card,section{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.card{padding:18px}.kpi{font-size:28px;font-weight:750}.label,.small{color:var(--muted);font-size:13px}
+section{padding:24px;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f9fafb}
+code{background:#f2f4f7;padding:2px 5px;border-radius:4px}
+.status,.tag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.ok{color:var(--ok);background:var(--okbg)}.bad{color:var(--bad);background:var(--badbg)}
+.tag{border-radius:6px;background:#f2f4f7;font-weight:500}
+.note{border-left:4px solid #98a2b3;padding:12px 16px;background:#f9fafb;margin:14px 0}
+.warn{border-left:4px solid #d92d20;padding:12px 16px;background:var(--badbg);margin:14px 0}
+a{color:#175cd3;text-decoration:none}a:hover{text-decoration:underline}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}table{display:block;overflow:auto}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h1>Newman Execution Report</h1>
+<div class="sub">API Testing — User Management System · ReqRes · Postman / Newman</div>
+<div class="sub">Execution captured: September 18, 2026 · 1 iteration</div>
+</header>
+
+<div class="grid">
+<div class="card"><div class="label">Requests</div><div class="kpi">30</div></div>
+<div class="card"><div class="label">Assertions</div><div class="kpi">80</div></div>
+<div class="card"><div class="label">Failed assertions</div><div class="kpi">16</div></div>
+<div class="card"><div class="label">Run duration</div><div class="kpi">19.6 s</div></div>
+</div>
+
+<section>
+<h2>1. Executive Summary</h2>
+<p>This report presents a structured version of the Newman output provided for this execution. The run contains <b>30 requests</b>, <b>30 test scripts</b>, and <b>80 assertions</b>. Newman reports <b>0 request failures</b>, while <b>16 assertions failed</b>.</p>
+<div class="warn"><b>Important:</b> this report represents this specific Newman execution. It remains distinct from the previously completed manual Postman revalidation (28 PASS / 2 FAIL).</div>
+</section>
+
+<section>
+<h2>2. Run Metrics</h2>
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Iterations</td><td>1</td></tr>
+<tr><td>Requests</td><td>30</td></tr>
+<tr><td>Test scripts</td><td>30</td></tr>
+<tr><td>Assertions</td><td>80</td></tr>
+<tr><td>Failed assertions</td><td>16</td></tr>
+<tr><td>Request failures</td><td>0</td></tr>
+<tr><td>Total duration</td><td>19.6 s</td></tr>
+<tr><td>Average response time</td><td>540 ms</td></tr>
+<tr><td>Minimum response time</td><td>312 ms</td></tr>
+<tr><td>Maximum response time</td><td>3.7 s</td></tr>
+<tr><td>Standard deviation</td><td>604 ms</td></tr>
+<tr><td>Average DNS lookup</td><td>2.1 s</td></tr>
+<tr><td>Average first byte</td><td>438 ms</td></tr>
+<tr><td>Data received</td><td>12.92 kB</td></tr>
+</table>
+</section>
+
+<section>
+<h2>3. Test Execution Matrix</h2>
+<p class="small">Status derived from assertions in this Newman execution. <b>PASS*</b> means the functional assertions passed, but the response-time assertion failed.</p>
+<table><tr><th>Test Case</th><th>Description</th><th>Status</th></tr>
+<tr><td><code>TC-AUTH-001</code></td><td>Login — valid credentials</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-AUTH-002</code></td><td>Login — invalid credentials</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-AUTH-003</code></td><td>Login — missing password</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-AUTH-004</code></td><td>Login — missing email</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-AUTH-005</code></td><td>Login — empty body</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-AUTH-006</code></td><td>No API key</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-AUTH-007</code></td><td>Invalid API key</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-GET-001</code></td><td>Retrieve users</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-GET-002</code></td><td>Pagination</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-GET-003</code></td><td>Retrieve user — valid ID</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-GET-004</code></td><td>Non-existing user</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-GET-005</code></td><td>Invalid ID</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-GET-006</code></td><td>Response structure</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-GET-007</code></td><td>Pagination metadata</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-POST-001</code></td><td>Create valid user</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-POST-002</code></td><td>Missing name</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-POST-003</code></td><td>Missing job</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-POST-004</code></td><td>Empty body</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-POST-005</code></td><td>Created response</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-PUT-001</code></td><td>Valid update</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-PUT-002</code></td><td>Non-existing update</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-PUT-003</code></td><td>Updated response</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-PATCH-001</code></td><td>Partial update</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-DELETE-001</code></td><td>Delete existing</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-DELETE-002</code></td><td>Delete non-existing</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-VAL-001</code></td><td>HTTP status</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-VAL-002</code></td><td>Content-Type</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-VAL-003</code></td><td>Response time</td><td><span class="status ok">PASS</span></td></tr><tr><td><code>TC-VAL-004</code></td><td>JSON data types</td><td><span class="status bad">FAIL</span></td></tr><tr><td><code>TC-VAL-005</code></td><td>Required fields</td><td><span class="status bad">FAIL</span></td></tr>
+</table>
+</section>
+
+<section>
+<h2>4. Failed Assertions — 16</h2>
+<table>
+<tr><th>Test Case</th><th>Description</th><th>Endpoint</th><th>HTTP</th><th>Assertion / Observation</th><th>Classification</th></tr>
+<tr><td><b>TC-AUTH-001</b></td><td>Login — valid credentials</td><td><code>POST /api/login</code></td><td>200</td><td>Response time 3728ms &gt; 2000ms</td><td><span class='tag'>Performance</span></td></tr><tr><td><b>TC-AUTH-002</b></td><td>Login — invalid credentials</td><td><code>POST /api/login</code></td><td>200</td><td>Expected status 401, received 200</td><td><span class='tag'>Functional / Security</span></td></tr><tr><td><b>TC-AUTH-006</b></td><td>API authentication — no API key</td><td><code>GET /api/users?page=2</code></td><td>200</td><td>Expected 401/403, received 200</td><td><span class='tag'>Functional / Security</span></td></tr><tr><td><b>TC-AUTH-007</b></td><td>API authentication — invalid API key</td><td><code>GET /api/users?page=2</code></td><td>200</td><td>Expected 401/403, received 200</td><td><span class='tag'>Newman discrepancy</span></td></tr><tr><td><b>TC-GET-003</b></td><td>Retrieve user — valid ID</td><td><code>GET /api/users/{{user_id}}</code></td><td>404</td><td>Expected 200; user object and ID assertions failed</td><td><span class='tag'>Collection configuration</span></td></tr><tr><td><b>TC-GET-006</b></td><td>Response structure — valid user</td><td><code>GET /api/users/{{user_id}}</code></td><td>404</td><td>Expected 200; required-field assertions failed</td><td><span class='tag'>Collection configuration</span></td></tr><tr><td><b>TC-VAL-001</b></td><td>HTTP status validation</td><td><code>GET /api/users/{{user_id}}</code></td><td>404</td><td>Expected 200, received 404</td><td><span class='tag'>Collection configuration</span></td></tr><tr><td><b>TC-VAL-002</b></td><td>Content-Type validation</td><td><code>GET /api/users/{{user_id}}</code></td><td>404</td><td>Expected 200, received 404</td><td><span class='tag'>Collection configuration</span></td></tr><tr><td><b>TC-VAL-004</b></td><td>JSON data types</td><td><code>GET /api/users/{{user_id}}</code></td><td>404</td><td>Expected 200; id/email type assertions failed</td><td><span class='tag'>Collection configuration</span></td></tr><tr><td><b>TC-VAL-005</b></td><td>Required fields</td><td><code>GET /api/users/{{user_id}}</code></td><td>404</td><td>Expected 200; required-field assertions failed</td><td><span class='tag'>Collection configuration</span></td></tr>
+</table>
+</section>
+
+<section>
+<h2>5. Defect Traceability</h2>
+<table>
+<tr><th>Defect</th><th>Test Case</th><th>Observation</th><th>Jira</th></tr>
+<tr>
+<td><b>BUG-API-001</b></td><td>TC-AUTH-002</td>
+<td>Invalid credentials returned HTTP 200 with a token instead of the expected authentication error.</td>
+<td><a href="https://ibrahimradjibou-1782879019644.atlassian.net/browse/SCRUM-26">SCRUM-26</a></td>
+</tr>
+<tr>
+<td><b>BUG-API-002</b></td><td>TC-AUTH-006</td>
+<td>A request without an API key returned HTTP 200 with user data.</td>
+<td><a href="https://ibrahimradjibou-1782879019644.atlassian.net/browse/SCRUM-27">SCRUM-27</a></td>
+</tr>
+</table>
+<div class="note"><b>TC-AUTH-007:</b> this Newman run returned HTTP 200 with an invalid API key. A previous manual revalidation returned HTTP 403, so this result is retained as a <b>Newman discrepancy requiring investigation</b>, without automatically creating another defect.</div>
+</section>
+
+<section>
+<h2>6. Collection Configuration Observations</h2>
+<ul>
+<li>Several exported requests contain <code>/api/users/{{user_id}}</code> with a missing closing brace in the collection source.</li>
+<li>This configuration issue explains the 404 responses observed for TC-GET-003, TC-GET-006 and TC-VAL-001/002/004/005.</li>
+<li>The same pattern appears in some PUT/PATCH/DELETE requests; some of them nevertheless returned 200/204.</li>
+<li>These issues are classified as <b>collection configuration problems</b>, not API functional defects.</li>
+</ul>
+</section>
+
+<section>
+<h2>7. Performance Observation</h2>
+<p><b>TC-AUTH-001</b> exceeded the 2-second assertion threshold with a measured response time of <b>3728 ms</b>. The average response time for the run was 540 ms, with a maximum of 3.7 s.</p>
+<p class="small">These measurements belong to this Newman run and may vary depending on network and environment conditions. They are not, by themselves, a performance benchmark.</p>
+</section>
+
+<section>
+<h2>8. Security & Data Handling</h2>
+<ul>
+<li>API keys and authentication tokens are not reproduced in this report.</li>
+<li>Authentication coverage includes invalid credentials, missing API key, and invalid API key scenarios.</li>
+<li>Authentication discrepancies are retained as observations requiring investigation.</li>
+</ul>
+</section>
+
+<section>
+<h2>9. Conclusion</h2>
+<p>This Newman execution provides a useful foundation for API test automation. The results show <b>authentication discrepancies</b>, a <b>performance observation</b>, and several <b>collection configuration issues</b>.</p>
+<p>Next step: correct the <code>{{user_id}}</code> references, rerun Newman, compare the new results with the manual revalidation, and update the Test Summary.</p>
+</section>
+
+<section>
+<h2>10. Source & Scope</h2>
+<p class="small">Source: the Newman verbose output provided for this project. This HTML file is a structured portfolio presentation of that output; it does not claim to be an HTML file automatically generated by the Newman reporter. Sensitive values present in the source output were intentionally excluded.</p>
+</section>
+
+</div>
+</body>
+</html>
