@@ -37,6 +37,27 @@ Les principaux objectifs de ce projet sont les suivants :
 - Maintenir la traçabilité entre exigences, scénarios de test, cas de test et anomalies
 
 ---
+## Résultats de l'exécution
+
+| Metric | Result |
+|---|---:|
+| Test Cases | 30 |
+| Executed | 30 |
+| PASS | 28 |
+| FAIL | 2 |
+| Pass Rate | 93.3% |
+| Execution Coverage | 100% |
+| Jira Defects | 2 |
+| Newman Assertions | 80 |
+
+---
+
+### Key Defects
+
+- **SCRUM-26** — Invalid credentials return HTTP 200 and a token
+- **SCRUM-27** — Request without API key returns HTTP 200
+
+---
 
 ## 🧩 Application sous test
 
@@ -64,14 +85,15 @@ https://reqres.in
 
 ## 🛠️ Outils et technologies
 
-Outil / Technologie| Utilisation
-Postman| Envoi des requêtes API et automatisation des tests
-JavaScript| Scripts de test et assertions Postman
-Newman| Exécution des collections en ligne de commande
-GitHub| Gestion des versions et documentation du projet
-Markdown| Documentation QA
-REST API| Interface de l'application sous test
-JSON| Données des requêtes et réponses
+| Outil / Technologie | Utilisation |
+|---|---|
+| Postman | Envoi des requêtes API et automatisation des tests |
+| JavaScript | Scripts de test et assertions Postman |
+| Newman | Exécution des collections en ligne de commande |
+| GitHub | Gestion des versions et documentation du projet |
+| Markdown | Documentation QA |
+| REST API | Interface de l'application sous test |
+| JSON | Données des requêtes et réponses |
 
 ---
 
@@ -103,12 +125,13 @@ Token
 
 Le projet couvre les principales opérations CRUD :
 
-Opération| Méthode HTTP| Objectif
-Create| POST| Créer un utilisateur
-Read| GET| Récupérer les utilisateurs
-Update| PUT| Modifier un utilisateur
-Partial Update| PATCH| Modifier partiellement un utilisateur
-Delete| DELETE| Supprimer un utilisateur
+| Opération | Méthode HTTP | Objectif |
+|---|---|---|
+| Create | POST | Créer un utilisateur |
+| Read | GET | Récupérer les utilisateurs |
+| Update | PUT | Modifier un utilisateur |
+| Partial Update | PATCH | Modifier partiellement un utilisateur |
+| Delete | DELETE | Supprimer un utilisateur |
 
 ---
 
@@ -208,12 +231,14 @@ pm.test("Le temps de réponse est inférieur à 1000 ms", function () {
 
 L'environnement Postman utilise notamment les variables suivantes :
 
-base_url
-api_key
-user_id
-created_user_id
-token
-environment
+| Variable | Purpose |
+|---|---|
+| `base_url` | Base API URL |
+| `api_key` | API authentication |
+| `user_id` | User identifier |
+| `created_user_id` | Created user identifier |
+| `token` | Authentication token |
+| `environment` | Test environment |
 
 Exemple :
 
@@ -382,32 +407,6 @@ Exécution du test
 Anomalie
 ```
 Cette approche permet d'avoir une visibilité sur la couverture des tests et sur l'impact des anomalies identifiées.
-
----
-
-## 📌 État du projet
-
-Statut : 🚧 En cours
-
-Terminé
-
-- [x] Définition du projet
-- [x] Structure du repository
-- [x] README initial
-
-En cours
-
-- [ ] Analyse de l'API
-- [ ] Test Plan
-- [ ] Scénarios de test
-- [ ] Cas de test
-- [ ] Données de test
-- [ ] Collection Postman
-- [ ] Assertions automatisées
-- [ ] Exécution des tests
-- [ ] Rapports de bugs
-- [ ] Reporting Newman
-- [ ] Test Summary
 
 ---
 
