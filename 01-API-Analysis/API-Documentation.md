@@ -44,6 +44,7 @@ x-api-key: {{api_key}}
 The API key must not be committed to the public GitHub repository.
 
 Postman environment variables are used to manage sensitive configuration values.
+Expected behavior will be verified during test execution.
 
 Example:
 ```text
@@ -56,12 +57,13 @@ api_key = <local-secret-value>
 
 The API uses standard HTTP methods.
 
-HTTP Method| Purpose
-GET| Retrieve resources
-POST| Create resources
-PUT| Update resources
-PATCH| Partially update resources
-DELETE| Delete resources
+| HTTP Method | Purpose |
+|---|---|
+| GET | Retrieve resources |
+| POST | Create resources |
+| PUT | Update resources |
+| PATCH | Partially update resources |
+| DELETE | Delete resources |
 
 ---
 
@@ -107,125 +109,33 @@ Expected behavior will be verified against the actual API response.
 
 ## 6. User Endpoints
 
-GET /api/users
+### GET /api/users
 
-Retrieves a list of users.
-
-Example:
-
-```text 
-GET {{base_url}}/api/users?page=2
-```
-
-Expected successful response:
-```text
-200 OK
-```
-The response contains user data and pagination information.
-
----
-
-GET /api/users/{id}
-
-Retrieves a specific user.
-
-Example:
-```text
-GET {{base_url}}/api/users/2
-
-Expected successful response:
-
-200 OK
-```
+- retrieves a list of users
+- retrieves a specific user
 
 Negative testing will include an invalid or non-existing user ID.
 
-Example:
-```text
-GET {{base_url}}/api/users/999
-
-Expected response:
-
-404 Not Found
-```
 ---
 
-POST /api/users
+### POST /api/users
+- creates a new user
+---
 
-Creates a new user.
-```text
-Example:
-
-POST {{base_url}}/api/users
-
-Request body:
-
-{
-  "name": "John QA",
-  "job": "QA Tester"
-}
-
-Expected response:
-
-201 Created
-```
-The response should contain information related to the created resource, such as an ID and creation timestamp.
+### PUT /api/users/{id}
+- updates an existing user
 
 ---
 
-PUT /api/users/{id}
-
-Updates an existing user.
-```text
-Example:
-
-PUT {{base_url}}/api/users/2
-
-Request body:
-
-{
-  "name": "John QA Updated",
-  "job": "Senior QA Tester"
-}
-
-Expected response:
-
-200 OK
-```
+### PATCH /api/users/{id}
+- performs a partial update of a user.
+  
 ---
 
-PATCH /api/users/{id}
+### DELETE /api/users/{id}
 
-Performs a partial update of a user.
-```text
-Example:
+- deletes a user.
 
-PATCH {{base_url}}/api/users/2
-
-Request body:
-
-{
-  "job": "Automation Tester"
-}
-
-Expected response:
-
-200 OK
-```
----
-
-DELETE /api/users/{id}
-
-Deletes a user.
-```text
-Example:
-
-DELETE {{base_url}}/api/users/2
-
-Expected response:
-
-204 No Content
-```
 ---
 
 ## 7. Response Validation
@@ -327,7 +237,7 @@ The API testing scope includes:
 - Headers
 - Response time
 
-### Automation
+### ### API Test Automation
 
 - Postman assertions
 - Environment variables
