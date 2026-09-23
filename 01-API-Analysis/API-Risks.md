@@ -32,16 +32,12 @@ Potential impact:
 
 Users may be unable to access protected functionality.
 
-Risk Level:
-
-## High
-
+**Risk Level:** High
 Testing focus:
 
 - Valid credentials
 - Invalid credentials
 - Missing credentials
-- Invalid email
 - Missing password
 - Authentication error response
 
@@ -57,9 +53,7 @@ Potential impact:
 
 Unauthorized requests could potentially be processed or legitimate requests could be rejected.
 
-Risk Level:
-
-### High
+**Risk Level:** High
 
 Testing focus:
 
@@ -82,9 +76,7 @@ Potential impact:
 
 User registration or data creation workflows could fail.
 
-Risk Level:
-
-### High
+**Risk Level:** High
 
 Testing focus:
 
@@ -108,9 +100,7 @@ Potential impact:
 
 User data could become inconsistent.
 
-Risk Level:
-
-### High
+**Risk Level:** High
 
 Testing focus:
 
@@ -133,9 +123,7 @@ Potential impact:
 
 Applications consuming the API may display incorrect information.
 
-Risk Level:
-
-### Medium
+**Risk Level:** Medium
 
 Testing focus:
 
@@ -158,9 +146,7 @@ Potential impact:
 
 Incorrect data could remain available or an unintended resource could be affected.
 
-Risk Level:
-
-### High
+**Risk Level:** High
 
 Testing focus:
 
@@ -184,9 +170,7 @@ Potential impact:
 
 Invalid data could enter the system.
 
-Risk Level:
-
-### Medium
+**Risk Level:** Medium
 
 Testing focus:
 
@@ -210,9 +194,7 @@ Potential impact:
 
 Client applications may handle the response incorrectly.
 
-Risk Level:
-
-### Medium
+**Risk Level:** Medium
 
 Testing focus:
 
@@ -235,9 +217,7 @@ Potential impact:
 
 Applications consuming the API may fail to process the response.
 
-Risk Level:
-
-### Medium
+**Risk Level:** Medium
 
 Testing focus:
 
@@ -262,9 +242,7 @@ Potential impact:
 
 Slow responses could negatively affect application performance.
 
-Risk Level:
-
-### Medium
+**Risk Level:** Medium
 
 Testing focus:
 
@@ -288,9 +266,7 @@ Potential impact:
 
 Unauthorized access or credential compromise.
 
-Risk Level:
-
-### High
+**Risk Level:** High
 
 Testing focus:
 
@@ -314,9 +290,7 @@ Potential impact:
 
 Defects could remain undetected.
 
-Risk Level:
-
-### Medium
+**Risk Level:** Medium
 
 Testing focus:
 
