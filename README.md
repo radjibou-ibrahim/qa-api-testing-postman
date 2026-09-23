@@ -36,6 +36,27 @@ The main objectives of this project are to:
 - Maintain traceability between requirements, test scenarios, test cases and defects
 
 ---
+## Key Results
+
+| Metric | Result |
+|---|---:|
+| Test Cases | 30 |
+| Executed | 30 |
+| PASS | 28 |
+| FAIL | 2 |
+| Pass Rate | 93.3% |
+| Execution Coverage | 100% |
+| Jira Defects | 2 |
+| Newman Assertions | 80 |
+
+---
+
+### Key Defects
+
+- **SCRUM-26** — Invalid credentials return HTTP 200 and a token
+- **SCRUM-27** — Request without API key returns HTTP 200
+
+---
 
 ## Application Under Test
 
@@ -101,12 +122,13 @@ Token
 
 The project covers the main CRUD operations:
 
-Operation| HTTP Method| Purpose
-Create| POST| Create a user
-Read| GET| Retrieve users
-Update| PUT| Update a user
-Partial Update| PATCH| Partially update a user
-Delete| DELETE| Delete a user
+| Operation | HTTP Method | Purpose |
+|---|---|---|
+| Create | POST | Create a user |
+| Read | GET | Retrieve users |
+| Update | PUT | Update a user |
+| Partial Update | PATCH | Partially update a user |
+| Delete | DELETE | Delete a user |
 
 ---
 
@@ -356,7 +378,7 @@ qa-api-testing-postman/
 ## Traceability
 
 Traceability is maintained throughout the testing process:
-
+``` text
 Requirement
      ↓
 Test Scenario
@@ -368,7 +390,7 @@ Postman Request
 Test Execution
      ↓
 Defect
-
+```
 This provides visibility into test coverage and the impact of identified defects.
 
 ---
