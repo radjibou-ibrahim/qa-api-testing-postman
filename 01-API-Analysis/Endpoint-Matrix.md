@@ -18,9 +18,12 @@ The matrix is used to identify:
 
 ## 2. Authentication Endpoints
 
-| ID | Method | Endpoint | Purpose | Expected Success | Negative Testing |
+| Endpoint | Method | Authentication | Request Body | Expected Status | Main Validations |
 |---|---|---|---|---|---|
-| AUTH-001 | POST | `/api/login` | Authenticate a user | 200 | Yes |
+| `/api/login` | POST | API Key + Credentials | JSON | 200 | Token |
+| `/api/login` | POST | API Key + Invalid/Missing Credentials | JSON | 400 | Error handling |
+
+---
 
 ## 3. User Endpoints
 
@@ -58,26 +61,22 @@ The matrix is used to identify:
 | 204 | No Content | Successful deletion |
 | 400 | Bad Request | Invalid request data |
 | 401 | Unauthorized | Authentication failure |
-| 404 | Not Found | Resource does not exist | 
+| 403 | Forbidden | Invalid API key / authorization failure |
+| 404 | Not Found | Resource does not exist |
 
 ---
 
 ## 6. CRUD Coverage
-```text
-CREATE
-POST /api/users
-        ↓
-READ
-GET /api/users
-GET /api/users/{id}
-        ↓
-UPDATE
-PUT /api/users/{id}
-PATCH /api/users/{id}
-        ↓
-DELETE
-DELETE /api/users/{id}
-```
+
+| CRUD Operation | HTTP Method | Endpoint |
+|---|---|---|
+| Create | POST | `/api/users` |
+| Read | GET | `/api/users` |
+| Read | GET | `/api/users/{id}` |
+| Update | PUT | `/api/users/{id}` |
+| Partial Update | PATCH | `/api/users/{id}` |
+| Delete | DELETE | `/api/users/{id}` |
+
 ---
 
 ## 7. Authentication Coverage
